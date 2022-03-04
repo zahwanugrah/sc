@@ -19,44 +19,26 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-akbarvpn="raw.githubusercontent.com/myridwan/sc/ipuk/ssh"
+akbarvpn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/ssh"
 # Link Hosting Kalian Untuk Sstp
-akbarvpnn="raw.githubusercontent.com/myridwan/sc/ipuk/sstp"
+akbarvpnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/sstp"
 # Link Hosting Kalian Untuk Ssr
-akbarvpnnn="raw.githubusercontent.com/myridwan/sc/ipuk/ssr"
+akbarvpnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-akbarvpnnnn="raw.githubusercontent.com/myridwan/sc/ipuk/shadowsocks"
+akbarvpnnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-akbarvpnnnnn="raw.githubusercontent.com/myridwan/sc/ipuk/wireguard"
+akbarvpnnnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/wireguard"
 # Link Hosting Kalian Untuk Xray
-akbarvpnnnnnn="raw.githubusercontent.com/myridwan/sc/ipuk/xray"
+akbarvpnnnnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/xray"
 # Link Hosting Kalian Untuk Ipsec
-akbarvpnnnnnnn="raw.githubusercontent.com/myridwan/sc/ipuk/ipsec"
+akbarvpnnnnnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/ipsec"
 # Link Hosting Kalian Untuk Backup
-akbarvpnnnnnnnn="raw.githubusercontent.com/myridwan/sc/ipuk/backup"
+akbarvpnnnnnnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/backup"
 # Link Hosting Kalian Untuk Websocket
-akbarvpnnnnnnnnn="raw.githubusercontent.com/myridwan/sc/ipuk/websocket"
+akbarvpnnnnnnnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/websocket"
 # Link Hosting Kalian Untuk Ohp
-akbarvpnnnnnnnnnn="raw.githubusercontent.com/myridwan/sc/ipuk/ohp"
+akbarvpnnnnnnnnnn="raw.githubusercontent.com/zahwanugrah/sc/ipuk/ohp"
 
-# Getting
-MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://myridwan.github.io/izin | grep $MYIP )
-echo "Memeriksa Hak Akses VPS..."
-if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${CYAN}Akses Diizinkan...${off}"
-sleep 1
-else
-clear
-echo -e "${PURPLE}Akses Diblokir!${off}"
-echo "Hanya Untuk Pengguna Berbayar!"
-echo "Silahkan Hubungi Admin"
-exit 0
-fi
-clear
-echo "Checking VPS"
-clear
 mkdir /var/lib/akbarstorevpn;
 echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 wget https://${akbarvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
