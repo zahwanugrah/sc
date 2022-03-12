@@ -12,18 +12,6 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://myridwan.github.io/izin | grep $MYIP )
-echo "Memeriksa Hak Akses VPS..."
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/Ridwan"
-echo -e "${NC}${LIGHT}WhatsApp : 085781385825"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/Rifan_aje"
-exit 0
-fi
 clear
 read -rp "Domain/Host : " -e domain
 echo "IP=$domain" >>/var/lib/akbarstorevpn/ipvps.conf
